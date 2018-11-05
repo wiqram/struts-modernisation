@@ -21,10 +21,10 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+/*@Component
 public class ListAllUsers {
 
-    private final UserService service;
+    private final UserRepository service;
 
     public ListAllUsers(UserService service) {
         this.service = service;
@@ -70,4 +70,4 @@ public class ListAllUsers {
 
         return "success";
     }
-}
+}*/

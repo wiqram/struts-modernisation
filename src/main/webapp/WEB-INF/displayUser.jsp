@@ -14,19 +14,20 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<title>All Users</title>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-    </tr>
-    <c:forEach items="${users}" var="u">
-        <tr>
-            <td>${u.id }</td>
-            <td>${u.firstName }</td>
-            <td>${u.lastName }</td>
-        </tr>
-    </c:forEach>
-</table>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<jsp:useBean id="user" type="org.superbiz.struts.User" scope="request"/>
+
+<t:layout title="User Details">
+    <h2>User Details</h2>
+
+    <dl>
+        <dt>ID</dt>
+        <dd>${user.id}</dd>
+
+        <dt>First Name</dt>
+        <dd>${user.firstName}</dd>
+
+        <dt>Last Name</dt>
+        <dd>${user.lastName}</dd>
+    </dl>
+</t:layout>
